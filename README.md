@@ -31,6 +31,12 @@ If you want to use any grep command, you can set `BUNDLER_GREP_CMD`.
 $ BUNDLER_GREP_CMD='hw' bundle grep KEYWORD
 ```
 
+If you want to grep specific gems, you can use `--gems` option.
+
+```sh
+$ bundle grep --gems gem_name1,gem_name2 KEYWORD
+```
+
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.

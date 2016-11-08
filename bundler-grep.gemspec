@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["takkanm"]
   spec.email         = ["takkanm@gmail.com"]
 
-  spec.summary       = %q{Write a short summary, because Rubygems requires one.}
-  spec.description   = %q{Write a longer description or delete this line.}
-  spec.homepage      = ""
+  spec.summary       = %q{bundle grep subcommand}
+  spec.description   = %q{grep bundle gems}
+  spec.homepage      = "https://github.com/takkanm/bundler-grep"
   spec.license       = "MIT"
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'

@@ -1,7 +1,10 @@
 require "bundler/grep/version"
+require 'bundler'
 
 module Bundler
   module Grep
-    # Your code goes here...
+     def self.start!(argv)
+       p Bundler.load.specs
+     end
   end
 end

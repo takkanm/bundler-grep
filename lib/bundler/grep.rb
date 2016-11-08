@@ -24,6 +24,7 @@ module Bundler
         opt.on('-g name1[,name2..]', '--gems name1[,name2..]', 'select target gems') do |gems|
           @gems = gems.split(',')
         end
+        opt.version = Bundler::Grep::VERSION
 
         opt.parse!(argv)
         @argv = argv

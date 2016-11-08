@@ -1,11 +1,20 @@
 require "bundler/grep/version"
 require 'bundler'
+require 'optparse'
 
 module Bundler
   module Grep
-    class << self
-      def start!(argv)
-        Kernel.exec(*grep_command, argv[0], *Bundler.load.specs.map(&:full_gem_path))
+    def self.start!(argv)
+      Bundler::Grep::Command.new(argv).start!
+    end
+
+    class Command
+      def initialize(argv)
+        @argv = argv
+      end
+
+      def start!
+        Kernel.exec(*grep_command, @argv[0], *Bundler.load.specs.map(&:full_gem_path))
       end
 
       private

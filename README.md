@@ -1,8 +1,7 @@
 # Bundler::Grep
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/bundler/grep`. To experiment with that code, run `bin/console` for an interactive prompt.
+add `grep` subcommand to bundler
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
@@ -22,7 +21,15 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```sh
+$ bundle grep KEYWORD
+```
+
+If you want to use any grep command, you can set `BUNDLER_GREP_CMD`.
+
+```sh
+$ BUNDLER_GREP_CMD='hw' bundle grep KEYWORD
+```
 
 ## Development
 

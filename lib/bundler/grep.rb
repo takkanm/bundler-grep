@@ -52,11 +52,11 @@ module Bundler
         return Bundler.load.specs if @gems.empty? && @ignore_gems.empty?
 
         Bundler.load.specs.find_all {|spec|
-          collecte_gem?(spec.name) && not_ignored_gem?(spec.name)
+          collected_gem?(spec.name) && not_ignored_gem?(spec.name)
         }
       end
 
-      def collecte_gem?(gem_name)
+      def collected_gem?(gem_name)
         @gems.empty? || @gems.include?(gem_name)
       end
 
